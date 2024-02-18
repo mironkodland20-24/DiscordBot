@@ -6,7 +6,7 @@ import os
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='/', intents=intents)
 
 @bot.event
 async def on_ready():
@@ -52,4 +52,4 @@ async def mem(ctx):
    # Можем передавать файл как параметр!
     await ctx.send(file=picture)
 
-bot.run("!!!Your bot's token should be here!!!")
+bot.run("!!Your bot's token should be here!!")
