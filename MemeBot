@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -29,6 +30,14 @@ async def animalmem(ctx):
    # Можем передавать файл как параметр!
     await ctx.send(file=picture)
 
+ 
+
+@bot.command()
+async def sovet(ctx):
+    sovet = ["Не разжигайте костры летом на сухой траве, потому что в последствии может быть пожар. Пожар может задеть лес, и будет гореть дом животных. Это важно. Если вы так не считаете, то поставьте себя на место зверька.", "Выключайте воду. Это важно, так как вода - это дом для рыбок. Если вы не согласны, то представьте свою жизнь без воздуха."]
+    random.choice(sovet)
+    await ctx.send(sovet)
+
     
 
 
@@ -37,10 +46,10 @@ async def animalmem(ctx):
 async def mem(ctx):
     images = os.listdir("images")
     random.choice(images)
-    with open('images/mem1.jpg', 'rb') as f:
+    with open('images, 'rb') as f:
         # В переменную кладем файл, который преобразуется в файл библиотеки Discord!
         picture = discord.File(f)
    # Можем передавать файл как параметр!
     await ctx.send(file=picture)
 
-bot.run("cfcf069d54aadd2dc7d6d148c3f837b14223c649cfe73d5a430998d5f5b61d47")
+bot.run("!!!Your bot's token should be here!!!")
